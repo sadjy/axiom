@@ -23,6 +23,16 @@ then
             doctl auth init -t "$token" | grep -vi "using token"
         fi
 
+        if [[ "$provider" == "linode" ]]; 
+        then
+            token="$(jq -r '.do_key' "$AXIOM_PATH"/accounts/"$1".json)"
+            size="$(jq -r '.default_size' "$AXIOM_PATH"/accounts/"$1".json)"
+            region="$(jq -r '.region' "$AXIOM_PATH"/accounts/"$1".json)"
+
+            mkdir -p "$HOME/.config"
+            echo -e "[DEFAULT]\ndefault-user = axiom\n\n[axiom]\ntoken = $token\nregion = $region\ntype = $size\nimage = linode/alpine3.10" > "$HOME/.config/linode-cli"
+        fi
+
         if [[ "$provider" == "ibm" ]]; 
         then
             token="$(jq -r '.ibm_cloud_api_key' "$AXIOM_PATH"/accounts/"$1".json)"
@@ -30,14 +40,13 @@ then
 
 			if [[ ! -f "$HOME/.packer.d/plugins/packer-builder-ibmcloud" ]]; then
 				echo -e "${Red}It seems that you don't have the packer plugin for ibm cloud?${Color_Off}"
-				echo -n -e "${Blue}Would you like me to install it for you? (https://github.com/pry0cc/packer-plugin-ibmcloud):\n y/n >> ${Color_Off}"
+				echo -n -e "${Blue}Would you like me to install it for you? (https://github.com/IBM/packer-plugin-ibmcloud/):\n y/n >> ${Color_Off}"
 				read ans
 
 				if [[ "$ans" == "y" ]]; then
 					os="$(uname -s | tr '[:upper:]' '[:lower:]')"
 					mkdir -p ~/.packer.d/plugins/
-					wget -O ~/.packer.d/plugins/packer-builder-ibmcloud "https://raw.githubusercontent.com/pry0cc/packer-plugin-ibmcloud/master/output/packer-builder-ibmcloud-$os"
-					chmod +x ~/.packer.d/plugins/packer-builder-ibmcloud
+          wget https://github.com/IBM/packer-plugin-ibmcloud/releases/download/v1.0.1/packer-builder-ibmcloud_1.0.1_linux_64-bit.tar.gz -O - | tar -xz -C ~/.packer.d/plugins/
 				fi
 			fi
 

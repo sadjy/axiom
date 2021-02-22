@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="screenshots/axiom-logo-new.png" alt="axio m" width="270px"></a>
+  <img src="screenshots/logov2.png" alt="axio m" width="530px"></a>
   <br>
 </h1>
 
@@ -17,7 +17,7 @@ Axiom works by pre-installing your tools of choice onto a 'base image', and then
 
 Because you can create many disposable instances very easily, axiom allows you to distribute scans of many different tools including dnsgen dnsx ffuf gau gowitness httpx masscan massdns nmap nuclei shuffledns & subfinder. Once installed and setup, you can distribute a scan of a large set of targets across 10-15 instances within minutes and get results extremely quickly. This is called [axiom-scan](https://github.com/pry0cc/axiom/wiki/Scans).
 
-Axiom supports several cloud providers, eventually, axiom should be completely cloud agnostic allowing unified control of a wide variety of different cloud environments with ease. Currently, DigitalOcean & IBM Cloud are officially supported providers. Google Compute is partially implemented. AWS & Azure are on the roadmap. If you would like prioritization of a feature or provider implementation, please contact me @pry0cc on Twitter and we can discuss :)
+Axiom supports several cloud providers, eventually, axiom should be completely cloud agnostic allowing unified control of a wide variety of different cloud environments with ease. Currently, DigitalOcean, IBM Cloud, & Linode are officially supported providers. Google Compute is partially implemented. AWS & Azure are on the roadmap. If you would like prioritization of a feature or provider implementation, please contact me @pry0cc on Twitter and we can discuss :)
 
 ## Resources
 
@@ -70,14 +70,19 @@ If you like Axiom and it saves you time, money or just brings you happy feelings
 Or buy me a coffee to keep me powered :)
 
 <a href="https://www.buymeacoffee.com/pry0cc" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-black.png" alt="Buy Me A Coffee" style="height: 5px !important;width: 25px !important;" ></a>
+
+## Sponsored By SecurityTrails!
+<img src="https://securitytrails.com/images/logo.png" width="300">
+We are lucky enough to be sponsored by the awesome SecurityTrails! Sign up for your free account <a href="https://securitytrails.com/app/signup?utm_source=axiom">here!</a>
+
 ---
 
 # Operating Systems Supported
 | OS         | Supported | Tested        |  
 |------------|-----------|---------------|
 | Ubuntu     |    Yes    | Ubuntu 20.04  |
+| Kali       |    Yes    | Kali 2020.4   |
 | MacOS      |    Yes    | MacOS 10.15   |
-| Debian     |    Yes    |     No        |
 | Arch Linux |    Yes    |     Yes       | 
 | Windows    | Partially | WSL w/ Ubuntu |
 
