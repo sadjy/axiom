@@ -1,0 +1,5 @@
+[{
+	"command":"/home/op/recon/paramspider/paramspider.py -d _target_ -e woff,css,js,png,svg,php,jpg -l high -o _output_/_target_",
+	"ext":"txt",
+	"threads":"3"
+}]

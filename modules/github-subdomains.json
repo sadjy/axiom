@@ -1,0 +1,5 @@
+[{
+	"command":"/home/op/go/bin/github-subdomains -d _target_ -t 875ae1709b77cffbce85065eebcdf20ea7edc48f -raw -o _output_/_target_",
+	"ext":"txt",
+	"threads":"3"
+}]
