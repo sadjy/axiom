@@ -102,7 +102,7 @@
         "git clone https://github.com/1ndianl33t/Gf-Patterns /home/op/.gf",
         "git clone https://github.com/projectdiscovery/nuclei-templates /home/op/recon/nuclei",
         "git clone https://github.com/projectdiscovery/nuclei.git; cd nuclei/v2/cmd/nuclei/; go build; sudo mv nuclei /usr/local/bin/",
-        "git clone https://github.com/devanshbatham/ParamSpider /home/op/recon/paramspider && cd /home/op/recon/paramspider && pip3 install -r requirements.txt && chmod +x paramaspider.py",
+        "git clone https://github.com/devanshbatham/ParamSpider /home/op/recon/paramspider && cd /home/op/recon/paramspider && pip3 install -r requirements.txt && chmod +x paramspider.py",
         "git clone https://github.com/devanshbatham/OpenRedireX /home/op/recon/openredirex && cd /home/op/recon/openredirex && chmod +x openredirex.py",
         "echo 'Installing github-subdomains'",
         "/bin/su -l op -c 'go get -u github.com/gwen001/github-subdomains'",
@@ -205,7 +205,8 @@
         "chown -R op:users /home/op",
         "chmod +x /etc/update-motd.d/00-header",
         "chown root:root /etc/sudoers /etc/sudoers.d -R",
-        "cp /home/op/recon/paramspider/gf_profiles/* /home/op/go/src/github.com/tomnomnom/gf/examples"
+        "cp /home/op/recon/paramspider/gf_profiles/* /home/op/.gf",
+        "cp /home/op/go/src/github.com/tomnomnom/gf/examples/* /home/op/.gf"
       ], "inline_shebang": "/bin/sh -x",
 	  "type": "shell"
     }

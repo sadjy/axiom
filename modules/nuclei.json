@@ -1,5 +1,5 @@
 [{
 	"command":"nuclei -silent -update-templates ; cat input | nuclei -t _wordlist_ -o output",
 	"ext":"txt",
-    "wordlist":"/home/op/nuclei-templates"
+    "wordlist":"/home/op/nuclei-vulnerabilities"
 }]
